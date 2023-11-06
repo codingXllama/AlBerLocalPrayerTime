@@ -1,0 +1,134 @@
+body {
+  /* padding-top: 0px; */
+  padding-bottom: 30px;
+  /* background-color: rebeccapurple; */
+  /* border: 1px solid red; */
+  /* overflow: hidden; */
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 9vw;
+  color: #4d0000 !important;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+    0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+#prayers,
+h2 {
+  font-weight: bold;
+  font-size: 9vw;
+  line-height: 145% !important;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 5.8vw;
+  line-height: 145% !important;
+}
+
+.day {
+  color: #fff;
+  text-align: left;
+  font-size: 7vw !important;
+}
+
+.time {
+  color: #fff;
+  text-align: right;
+  font-size: 7vw !important;
+}
+
+.hijriDate {
+  color: #fff;
+  text-align: center;
+  font-size: 7.5vw !important;
+}
+
+.Iqama {
+  text-align: right;
+  color: #800000 !important;
+}
+
+.IqamaHeader {
+  text-align: right;
+  color: #fff !important;
+  font-size: 7.5vw;
+}
+
+.AdhanHeader {
+  text-align: left;
+  color: #fff !important;
+  font-size: 7.5vw;
+}
+
+#prayers {
+  width: 100%;
+  border-collapse: collapse;
+  border-left: 1px solid #999;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+}
+
+#prayers td,
+#prayers th {
+  padding: 3px 7px 2px 7px;
+}
+
+#prayers th {
+  padding-top: 5px;
+  padding-bottom: 4px;
+  background-color: #587461;
+  color: #fff;
+}
+
+#prayers tr:nth-child(even) td {
+  color: #000;
+  background-color: #c5d3c9;
+}
+
+#prayers tr:nth-child(odd) td {
+  color: #000;
+  background-color: #fff;
+}
+
+.HighLight {
+  background-color: #f90 !important;
+}
+
+.Friday {
+  padding-top: 5px;
+  padding-bottom: 4px;
+  background-color: #587461 !important;
+  color: #fff !important;
+  text-align: right;
+}
+
+.Notes {
+  font-weight: bold;
+  font-size: 9vw;
+  color: #800000 !important;
+}
+
+#header {
+  text-align: center;
+}
+
+.logo-image {
+  width: 15vw;
+}
+
+.theme-showcase {
+  width: 95%;
+  height: auto;
+}
+
+.countDownTimer {
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  transform: translate(-50%, 35vw);
+  z-index: 1000;
+  width: 90%;
+}

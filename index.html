@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MosqueApp">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="./img/favicon.ico">
+
+        <title>Prayer Timing</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap theme -->
+        <link href="./css/bootstrap-theme.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="./css/theme23.css" rel="stylesheet">
+
+        <!-- angular app js files -->
+        <script src="./js/Angular/angular.js"></script>
+        <script src="./js/Angular/hijriCalendar.js"></script>
+        <script src="./js/Angular/PrayerTimes23.js"></script>
+        <script src="./js/Angular/app.js"></script>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    </head>
+
+    <body role="document">
+        <div class="container theme-showcase" role="main">
+            <div ng-controller="PrayerTimingController">
+                <!-- header and date -->
+                <div class=" page-header">
+                    <!--h1 id="header">Windsor Islamic Association</h1-->
+                    <img src="./img/Header.png" style='width:100%;' border="0" alt="Null">
+
+                    <div class="countDownTimer">
+                        <div class="alert-danger alert" ng-show="timeUntilIqama != null">
+                            <h1><strong>
+                                    <center>{{nextPrayer}} Iqama in 00:{{timeUntilIqama | date:'mm:ss'}}</center>
+                                </strong></h1>
+                            <h1 align="right" ng-repeat="Note in Notes">{{Note}}</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- current time -->
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <h2 class="hijriDate">{{hijriDate}}</h2>
+                        </div>
+                    </div>
+                </nav>
+
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <h2 class="day">{{ date | date: 'EEE, MMM d' }}</h2>
+                            </div>
+                            <div class="col-xs-6">
+                                <h2 class="time">{{ date | date:'h:mm:ss a' }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+
+                <!-- prayer time table -->
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table id="prayers">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="AdhanHeader">Adhan</th>
+                                        <th class="IqamaHeader">Iqama</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="Prayer in Prayers">
+                                        <td ng-class="{HighLight: Prayer.current}">{{Prayer.Prayer}}</td>
+                                        <td ng-class="{HighLight: Prayer.current}">{{Prayer.Athan | date:'hh:mm'}}</td>
+                                        <td class="Iqama" ng-class="{HighLight: Prayer.current}">
+                                            {{Prayer.Iqama | date:'hh:mm'}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="Friday" colspan="2">1<sup>st</sup> Jumu'ah</td>
+                                        <td class="Friday">12:35</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="Friday" colspan="2">2<sup>nd</sup> Jumu'ah</td>
+                                        <td class="Friday">01:30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--div class="page-header"-->
+                <!--div class="alert-danger alert" ng-show="Notes != null">
+                <h3><strong><u>Notes!</u></strong> {{Note}}</h3>
+                <div ng-repeat="Note in Notes">
+                    <h3>{{Note}}</h3>
+                </div>
+            </div>
+            <div ng-show="Notes == null">
+                <img src="assets/img/Footer.png" style='width:100%;' border="0" alt="Null">
+            </div-->
+            </div>
+
+            <!-- Bootstrap core JavaScript
+    ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/bootstrap.min.js"></script>
+            <script src="assets/js/refresh.js"></script>
+
+    </body>
+
+</html>
